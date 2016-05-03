@@ -3,7 +3,7 @@ parameters:
     ongr_translations.filter.pager.request_field: page
     ongr_translations.filter.pager.count_per_page: 20
     ongr_translations.filter.pager.max_pages: 5
-    
+
     ongr_translations.filter.sort.class: ONGR\FilterManagerBundle\Filters\Widget\Sort\Sort
     ongr_translations.filter.sort.request_field: sort
     ongr_translations.filter.sort.choices:
@@ -43,27 +43,27 @@ parameters:
             order: "asc"
             default: false
             mode: ~
-    
+
     ongr_translations.filter.match_search.class: ONGR\FilterManagerBundle\Filters\Widget\Search\MatchSearch
     ongr_translations.filter.match_search.request_field: q
     ongr_translations.filter.match_search.field: "message,key"
-    
+
     ongr_translations.filter.single_term.class: ONGR\FilterManagerBundle\Filters\Widget\Choice\SingleTermChoice
     ongr_translations.filter.single_term.domain.request_field: domain
     ongr_translations.filter.single_term.domain.field: domain
 
     ongr_translations.filter.locale.class: ONGR\TranslationsBundle\Filter\LocaleFilter
     ongr_translations.filter.locale.request_field: locale
-    ongr_translations.filter.locale.field: locale
+    ongr_translations.filter.locale.field: messages.locale
 
     ongr_translations.filter.missing_locale.class: ONGR\TranslationsBundle\Filter\MissingLocaleFilter
     ongr_translations.filter.missing_locale.request_field: missing_locale
     ongr_translations.filter.missing_locale.field: locale
-    
+
     ongr_translations.filter.tag.class: ONGR\FilterManagerBundle\Filters\Widget\Choice\SingleTermChoice
     ongr_translations.filter.tag.request_field: tag
     ongr_translations.filter.tag.field: tags.name
-    
+
     ongr_translations.filter.status.class: ONGR\FilterManagerBundle\Filters\Widget\Choice\SingleTermChoice
     ongr_translations.filter.status.request_field: status
     ongr_translations.filter.status.field: status
@@ -95,13 +95,13 @@ services:
         calls:
             - ["setRequestField", ["%ongr_translations.filter.sort.request_field%"]]
             - ["setChoices", ["%ongr_translations.filter.sort.choices%"]]
-    
+
     ongr_translations.filter.match_search:
         class: "%ongr_translations.filter.match_search.class%"
         calls:
             - ["setRequestField", ["%ongr_translations.filter.match_search.request_field%"]]
             - ["setField", ["%ongr_translations.filter.match_search.field%"]]
-            
+
     ongr_translations.filter.single_term.domain:
         class: "%ongr_translations.filter.single_term.class%"
         calls:
