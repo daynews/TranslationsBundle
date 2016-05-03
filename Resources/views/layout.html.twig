@@ -44,21 +44,17 @@
                                 {% if filters_manager.filters.search is defined %}
                                     <form action="?" method="GET" class="navbar-form navbar-left" role="search">
                                         <div class="input-group">
-                                        <span class="input-group-btn">
-                                            {% if filters_manager.filters.search.state.active %}
-                                                <a href="{{ path('ongr_translations_list_page', filters_manager.filters.search.resetUrlParameters) }}" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
-                                            {% endif %}
-                                            <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
-                                        </span>
                                             <input type="text" class="form-control" name="q" size="24" value="{% if filters_manager.filters.search.state.value is not empty %}{{ filters_manager.filters.search.state.value }}{% endif %}" placeholder="{% trans from 'ONGRTranslations' %}placeholder.search_for{% endtrans %}">
+                                            <span class="input-group-btn">
+                                                {% if filters_manager.filters.search.state.active %}
+                                                    <a href="{{ path('ongr_translations_list_page', filters_manager.filters.search.resetUrlParameters) }}" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+                                                {% endif %}
+                                                <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
                                         </div><!-- /input-group -->
                                     </form>
                                 {% endif %}
                             {% endblock %}
-
-                            <div class="navbar-left navbar-btn">
-                                <button class="btn btn-primary" ng-click="openExportModal()" >Export</button>
-                            </div>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
                 </nav>
