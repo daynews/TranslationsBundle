@@ -58,7 +58,7 @@ parameters:
 
     ongr_translations.filter.missing_locale.class: ONGR\TranslationsBundle\Filter\MissingLocaleFilter
     ongr_translations.filter.missing_locale.request_field: missing_locale
-    ongr_translations.filter.missing_locale.field: locale
+    ongr_translations.filter.missing_locale.field: messages.locale
 
     ongr_translations.filter.tag.class: ONGR\FilterManagerBundle\Filters\Widget\Choice\SingleTermChoice
     ongr_translations.filter.tag.request_field: tag
