@@ -124,28 +124,6 @@ angular
             }
 
             /**
-             * Extra shortcuts for better ux.
-             *
-             * @param {Event} e
-             */
-            $scope.keyPress = function(e) {
-                if (!$scope.isInput(e.target)) {
-                    e.preventDefault();
-                    switch(e.keyCode) {
-                        case 40: // down
-                            $scope.selectNext();
-                            break;
-                        case 38: // up
-                            $scope.selectPrev();
-                            break;
-                        case 27: //esc
-                            $scope.closeBar();
-                            break;
-                    }
-                }
-            }
-
-            /**
              * Checks if target is input element.
              * 
              * @param {{}} $target

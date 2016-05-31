@@ -3,7 +3,7 @@
 {% block body_attr %}ng-app="ongr.translations" ng-controller="list"{% endblock %}
 
 {% block content %}
-    <div ng-keydown="keyPress($event)" tabindex="0" class="container-fluid">
+    <div tabindex="0" class="container-fluid">
         {% verbatim %}
             <div class="row" ng-show="barVisible">
                 <div class="col-lg-12">
@@ -52,7 +52,7 @@
                 </div>
             </div>
         {% endverbatim %}
-        
+
         <div class="row">
             <div class="col-lg-12">
                 <table class="table table-hover translations-table">
