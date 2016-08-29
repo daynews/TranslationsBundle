@@ -39,7 +39,7 @@ class LocaleFilter extends MultiTermChoice implements FilterInterface
         $name = $state ? $state->getName() : $this->getField();
         $agg = new TermsAggregation($name);
         $agg->setField($this->getField());
-        $agg->setSize(999);
+        $agg->addParameter('size', 999);
         $search->addAggregation($agg);
     }
 }
